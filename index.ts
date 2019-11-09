@@ -21,6 +21,18 @@ interface Reaction {
   timestamp: number
 }
 
+interface PairwiseChoice {
+  A: Statement
+  1: Statement
+}
+
+interface PairwiseVote {
+  choices: PairwiseChoice
+  choice: string
+  id: string
+  timestamp: number
+}
+
 declare class Contactable {
   constructor(id: string, name: string)
   id: string
@@ -35,5 +47,7 @@ export {
   Contactable,
   Statement,
   Option,
-  Reaction
+  Reaction,
+  PairwiseChoice,
+  PairwiseVote
 }

@@ -17,6 +17,16 @@ interface Reaction {
     id: string;
     timestamp: number;
 }
+interface PairwiseChoice {
+    A: Statement;
+    1: Statement;
+}
+interface PairwiseVote {
+    choices: PairwiseChoice;
+    choice: string;
+    id: string;
+    timestamp: number;
+}
 declare class Contactable {
     constructor(id: string, name: string);
     id: string;
@@ -25,4 +35,4 @@ declare class Contactable {
     listen(callback: (text: string) => void): void;
     stopListening(): void;
 }
-export { ContactableConfig, Contactable, Statement, Option, Reaction };
+export { ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote };
