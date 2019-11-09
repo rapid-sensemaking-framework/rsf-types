@@ -1,0 +1,27 @@
+{
+  "name": "rsf-types",
+  "version": "0.0.1",
+  "description": "rapid sensemaking framework typescript type definitions",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapid-sensemaking-framework/rsf-types.git"
+  },
+  "keywords": [
+    "sensemaking",
+    "collective",
+    "intelligence"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rapid-sensemaking-framework/rsf-types/issues"
+  },
+  "homepage": "https://github.com/rapid-sensemaking-framework/rsf-types#readme",
+  "dependencies": {
+    "typescript": "^3.7.2"
+  }
+}
