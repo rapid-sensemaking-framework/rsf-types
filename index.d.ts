@@ -17,4 +17,12 @@ interface Reaction {
     id: string;
     timestamp: number;
 }
-export { ContactableConfig, Statement, Option, Reaction };
+declare class Contactable {
+    constructor(id: string, name: string);
+    id: string;
+    name: string;
+    speak(text: string): void;
+    listen(callback: (text: string) => void): void;
+    stopListening(): void;
+}
+export { ContactableConfig, Contactable, Statement, Option, Reaction };
