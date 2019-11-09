@@ -21,7 +21,7 @@ declare class Contactable {
     constructor(id: string, name: string);
     id: string;
     name: string;
-    speak(text: string): void;
+    speak(text: string): Promise<void>;
     listen(callback: (text: string) => void): void;
     stopListening(): void;
 }
