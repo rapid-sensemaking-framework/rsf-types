@@ -35,4 +35,10 @@ declare class Contactable {
     listen(callback: (text: string) => void): void;
     stopListening(): void;
 }
-export { ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote };
+interface ParticipantRegisterData {
+    id: string;
+    maxParticipants: number | string;
+    maxTime: number;
+    processDescription: string;
+}
+export { ParticipantRegisterData, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote };
