@@ -41,4 +41,18 @@ interface ParticipantRegisterData {
     maxTime: number;
     processDescription: string;
 }
-export { ParticipantRegisterData, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote };
+interface ContactableSpecifyInit {
+    doTelegram: boolean;
+    doMattermost: boolean;
+    doText: boolean;
+}
+interface ContactableProxyConfig {
+    socketUrl: string;
+    socketSecret: string;
+}
+interface ContactableInitConfig {
+    mattermostable: ContactableProxyConfig;
+    textable: ContactableProxyConfig;
+    telegramable: ContactableProxyConfig;
+}
+export { ParticipantRegisterData, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };
