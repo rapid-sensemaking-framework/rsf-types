@@ -1,6 +1,6 @@
 {
   "name": "rsf-types",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "rapid sensemaking framework typescript type definitions",
   "main": "index.js",
   "scripts": {
