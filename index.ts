@@ -52,7 +52,7 @@ interface ParticipantRegisterData {
 interface ContactableSpecifyInit {
   doTelegram: boolean
   doMattermost: boolean
-  doText: boolean
+  doSms: boolean
 }
 
 interface ContactableProxyConfig {
@@ -62,7 +62,7 @@ interface ContactableProxyConfig {
 
 interface ContactableInitConfig {
   mattermostable: ContactableProxyConfig
-  textable: ContactableProxyConfig
+  smsable: ContactableProxyConfig
   telegramable: ContactableProxyConfig
 }
 

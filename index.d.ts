@@ -44,7 +44,7 @@ interface ParticipantRegisterData {
 interface ContactableSpecifyInit {
     doTelegram: boolean;
     doMattermost: boolean;
-    doText: boolean;
+    doSms: boolean;
 }
 interface ContactableProxyConfig {
     socketUrl: string;
@@ -52,7 +52,7 @@ interface ContactableProxyConfig {
 }
 interface ContactableInitConfig {
     mattermostable: ContactableProxyConfig;
-    textable: ContactableProxyConfig;
+    smsable: ContactableProxyConfig;
     telegramable: ContactableProxyConfig;
 }
 export { ParticipantRegisterData, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };
