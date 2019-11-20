@@ -55,7 +55,7 @@ declare class Contactable {
   speak(text: string): Promise<void>
   listen(callback: (text: string) => void): void
   stopListening(): void
-  config(): ContactableConfig
+  // config(): ContactableConfig
 }
 
 interface ParticipantRegisterData {

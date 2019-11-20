@@ -47,7 +47,6 @@ declare class Contactable {
     speak(text: string): Promise<void>;
     listen(callback: (text: string) => void): void;
     stopListening(): void;
-    config(): ContactableConfig;
 }
 interface ParticipantRegisterData {
     id: string;
