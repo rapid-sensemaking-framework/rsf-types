@@ -5,7 +5,8 @@ interface ContactableConfig {
 }
 interface Statement {
     text: string;
-    id: ContactableConfig;
+    id?: ContactableConfig;
+    timestamp?: number;
 }
 interface Option {
     triggers: string[];
@@ -15,8 +16,8 @@ interface Reaction {
     statement: Statement;
     response: string;
     responseTrigger: string;
-    id: ContactableConfig;
-    timestamp: number;
+    id?: ContactableConfig;
+    timestamp?: number;
 }
 interface PairwiseChoice {
     0: Statement;
@@ -25,20 +26,20 @@ interface PairwiseChoice {
 interface PairwiseVote {
     choices: PairwiseChoice;
     choice: number;
-    id: ContactableConfig;
-    timestamp: number;
+    id?: ContactableConfig;
+    timestamp?: number;
 }
 interface PairwiseQuantified {
     choices: PairwiseChoice;
     quantity: number;
-    id: ContactableConfig;
-    timestamp: number;
+    id?: ContactableConfig;
+    timestamp?: number;
 }
 interface PairwiseQualified {
     choices: PairwiseChoice;
     quality: number;
-    id: ContactableConfig;
-    timestamp: number;
+    id?: ContactableConfig;
+    timestamp?: number;
 }
 declare class Contactable {
     constructor(id: string, name: string);
