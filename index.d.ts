@@ -5,6 +5,7 @@ interface ContactableConfig {
 }
 interface Statement {
     text: string;
+    id: ContactableConfig;
 }
 interface Option {
     triggers: string[];
@@ -14,17 +15,29 @@ interface Reaction {
     statement: Statement;
     response: string;
     responseTrigger: string;
-    id: string;
+    id: ContactableConfig;
     timestamp: number;
 }
 interface PairwiseChoice {
-    A: Statement;
+    0: Statement;
     1: Statement;
 }
 interface PairwiseVote {
     choices: PairwiseChoice;
-    choice: string;
-    id: string;
+    choice: number;
+    id: ContactableConfig;
+    timestamp: number;
+}
+interface PairwiseQuantified {
+    choices: PairwiseChoice;
+    quantity: number;
+    id: ContactableConfig;
+    timestamp: number;
+}
+interface PairwiseQualified {
+    choices: PairwiseChoice;
+    quality: number;
+    id: ContactableConfig;
     timestamp: number;
 }
 declare class Contactable {
@@ -34,6 +47,7 @@ declare class Contactable {
     speak(text: string): Promise<void>;
     listen(callback: (text: string) => void): void;
     stopListening(): void;
+    config(): ContactableConfig;
 }
 interface ParticipantRegisterData {
     id: string;
@@ -55,4 +69,4 @@ interface ContactableInitConfig {
     smsable: ContactableProxyConfig;
     telegramable: ContactableProxyConfig;
 }
-export { ParticipantRegisterData, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };
+export { ParticipantRegisterData, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, PairwiseQuantified, PairwiseQualified, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };
