@@ -44,7 +44,7 @@ interface PairwiseQuantified {
 
 interface PairwiseQualified {
   choices: PairwiseChoice
-  quality: number
+  quality: string
   id?: ContactableConfig
   timestamp?: number
 }
