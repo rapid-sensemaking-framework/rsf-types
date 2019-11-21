@@ -28,6 +28,8 @@ interface PairwiseChoice {
   1: Statement
 }
 
+
+// consolidate these three PairwiseX types and use a generic? plus subtypes?
 interface PairwiseVote {
   choices: PairwiseChoice
   choice: number
@@ -56,7 +58,7 @@ declare class Contactable {
   speak(text: string): Promise<void>
   listen(callback: (text: string) => void): void
   stopListening(): void
-  // config(): ContactableConfig
+  config(): ContactableConfig
 }
 
 interface ParticipantRegisterData {
