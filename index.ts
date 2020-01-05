@@ -28,7 +28,6 @@ interface PairwiseChoice {
   1: Statement
 }
 
-
 // consolidate these three PairwiseX types and use a generic? plus subtypes?
 interface PairwiseVote {
   choices: PairwiseChoice
@@ -65,7 +64,7 @@ interface ParticipantRegisterData {
   id: string
   maxParticipants: number | string
   maxTime: number
-  processDescription: string
+  description: string
 }
 
 interface ContactableSpecifyInit {

@@ -54,7 +54,7 @@ interface ParticipantRegisterData {
     id: string;
     maxParticipants: number | string;
     maxTime: number;
-    processDescription: string;
+    description: string;
 }
 interface ContactableSpecifyInit {
     doTelegram: boolean;
