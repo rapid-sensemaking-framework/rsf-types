@@ -50,7 +50,7 @@ declare class Contactable {
     stopListening(): void;
     config(): ContactableConfig;
 }
-interface ParticipantRegisterData {
+interface ParticipantRegisterConfig {
     id: string;
     maxParticipants: number | string;
     maxTime: number;
@@ -70,4 +70,4 @@ interface ContactableInitConfig {
     smsable: ContactableProxyConfig;
     telegramable: ContactableProxyConfig;
 }
-export { ParticipantRegisterData, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, PairwiseQuantified, PairwiseQualified, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };
+export { ParticipantRegisterConfig, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, PairwiseQuantified, PairwiseQualified, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };

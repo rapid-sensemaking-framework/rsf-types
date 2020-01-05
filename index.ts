@@ -60,7 +60,7 @@ declare class Contactable {
   config(): ContactableConfig
 }
 
-interface ParticipantRegisterData {
+interface ParticipantRegisterConfig {
   id: string
   maxParticipants: number | string
   maxTime: number
@@ -85,7 +85,7 @@ interface ContactableInitConfig {
 }
 
 export {
-  ParticipantRegisterData,
+  ParticipantRegisterConfig,
   ContactableConfig,
   Contactable,
   Statement,
