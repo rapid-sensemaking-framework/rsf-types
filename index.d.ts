@@ -52,9 +52,16 @@ declare class Contactable {
 }
 interface ParticipantRegisterConfig {
     id: string;
+    title: string;
+    description: string;
     maxParticipants: number | string;
     maxTime: number;
-    description: string;
+    types: RegisterTypesConfig;
+}
+interface RegisterTypesConfig {
+    telegram: boolean;
+    sms: boolean;
+    mattermost: boolean;
 }
 interface ContactableSpecifyInit {
     doTelegram: boolean;
@@ -70,4 +77,4 @@ interface ContactableInitConfig {
     smsable: ContactableProxyConfig;
     telegramable: ContactableProxyConfig;
 }
-export { ParticipantRegisterConfig, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, PairwiseQuantified, PairwiseQualified, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };
+export { RegisterTypesConfig, ParticipantRegisterConfig, ContactableConfig, Contactable, Statement, Option, Reaction, PairwiseChoice, PairwiseVote, PairwiseQuantified, PairwiseQualified, ContactableSpecifyInit, ContactableProxyConfig, ContactableInitConfig };

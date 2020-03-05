@@ -62,9 +62,17 @@ declare class Contactable {
 
 interface ParticipantRegisterConfig {
   id: string
+  title: string
+  description: string
   maxParticipants: number | string
   maxTime: number
-  description: string
+  types: RegisterTypesConfig
+}
+
+interface RegisterTypesConfig {
+  telegram: boolean
+  sms: boolean
+  mattermost: boolean
 }
 
 interface ContactableSpecifyInit {
@@ -85,6 +93,7 @@ interface ContactableInitConfig {
 }
 
 export {
+  RegisterTypesConfig,
   ParticipantRegisterConfig,
   ContactableConfig,
   Contactable,
